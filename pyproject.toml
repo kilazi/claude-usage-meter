@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "claude-usage-meter"
+version = "0.1.0"
+description = "See which session, project and model used your Claude Code and Codex weekly limit, and get warned when one session is burning the week."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "kilazi"}]
+requires-python = ">=3.8"
+keywords = ["claude-code", "codex", "usage", "rate-limit", "tokens"]
+
+[project.urls]
+Homepage = "https://kilazi.com/wiki/claude-usage-meter/"
+Repository = "https://github.com/kilazi/claude-usage-meter"
+
+[project.scripts]
+claude-usage-meter = "claude_usage_meter.cli:main"
+
+[tool.setuptools]
+packages = ["claude_usage_meter"]
